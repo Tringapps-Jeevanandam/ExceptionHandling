@@ -1,7 +1,7 @@
 package je;
 import java.util.Scanner;
 import java.util.logging.Logger;
-public class dbconnection {
+public class DBCONNECTION {
     public static final Logger Log = Logger.getLogger("InfoLogging");
     static int flag = 0;
     static dbconnection con = null;
@@ -18,7 +18,7 @@ public class dbconnection {
 
     static void newconnection(){
         flag = 1;
-        Log.info("Connection created: "+con);
+        Log.info("Connection created: {}",con);
 
     }
 
@@ -29,7 +29,7 @@ public class dbconnection {
     }
 }
 
-class database{
+class DATABASE{
     public static final Logger Log = Logger.getLogger("InfoLogging");
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
