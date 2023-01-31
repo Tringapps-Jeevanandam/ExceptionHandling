@@ -35,14 +35,6 @@ class CREDITCARD{
         cardNumber = sc.nextLong();
         Log.info("Exp Date:");
         expDate = sc.next();
-        try{
-            CREDIT cr = new CREDIT(m, cardNumber, expDate);
-            CREDIT cr2 = (CREDIT)cr.clone();
-        }
-        catch(Exception e){
-            String x = "Exception:"+e;
-            Log.info(x);
-        }
         CREDIT cr = new CREDIT(cardHolderName, cardNumber, expDate);
         CREDIT cr2 = (CREDIT)cr.clone();
         Log.info("New card Number: ");
