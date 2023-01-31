@@ -2,7 +2,7 @@ package je;
 
 import java.util.*;
 import java.util.logging.Logger;
-class CREDIT implements Cloneable{
+class CREDIT{
     String cardHolderName;
     long cardNumber;
     String expDate;
@@ -12,13 +12,19 @@ class CREDIT implements Cloneable{
         this.cardNumber = cardNumber;
         this.expDate = expDate;
     }
+    CREDIT(CREDIT obj)
+    {
+        cardHolderName = obj.cardHolderName;
+        cardNumber = obj.cardNumber;
+        expDate = obj.expDate;
+
+    }
     boolean equals(long newCardNumber){
         return cardNumber==newCardNumber;
     }
 
-    public Object clone()throws CloneNotSupportedException{  
-        return super.clone();  
-        }  
+    
+   
 
 }
 class CREDITCARD{
@@ -36,7 +42,7 @@ class CREDITCARD{
         Log.info("Exp Date:");
         expDate = sc.next();
         CREDIT cr = new CREDIT(cardHolderName, cardNumber, expDate);
-        CREDIT cr2 = (CREDIT)cr.clone();
+        CREDIT cr2 = new CREDIT(cr);
         Log.info("New card Number: ");
         long newCardNumber = sc.nextLong();
         if(!cr.equals(newCardNumber)){
