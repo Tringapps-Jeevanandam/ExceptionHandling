@@ -29,7 +29,7 @@ class CREDIT{
 }
 class CREDITCARD{
     public static final Logger Log = Logger.getLogger("InfoLogging");
-    public static void main(String[] args) throws CloneNotSupportedException {
+    public static void main(String[] args)  {
         String cardHolderName;
         long cardNumber;
         String expDate;
