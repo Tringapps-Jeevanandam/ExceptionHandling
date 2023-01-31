@@ -16,8 +16,8 @@ class CREDIT implements Cloneable{
         return cardNumber==newCardNumber;
     }
 
-    public Object Clone()throws CloneNotSupportedException{  
-        return super.Clone();  
+    public Object clone()throws CloneNotSupportedException{  
+        return super.clone();  
         }  
 
 }
